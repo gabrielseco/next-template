@@ -1,4 +1,4 @@
-import Hello from './Hello';
+import { Hello } from './Hello';
 
 //eslint-disable-next-line
 export default { title: 'modules/hello/Hello', component: Hello };

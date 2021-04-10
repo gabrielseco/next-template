@@ -11,12 +11,8 @@ const getLanguage = () => {
 export const i18nConfig = {
   languages: ['en', 'es'],
   translations: {
-    en: {
-     
-    },
-    es: {
-      
-    }
+    en: {},
+    es: {}
   },
   fallbackLng: 'en',
   language: getLanguage()

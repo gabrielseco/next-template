@@ -4,7 +4,6 @@ import { withNextRouter } from 'storybook-addon-next-router';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { initializeWorker, mswDecorator } from 'msw-storybook-addon';
 import * as nextImage from 'next/image';
-
 import { i18nConfig } from '@config/i18n';
 
 import { Image } from './mocks/Image';

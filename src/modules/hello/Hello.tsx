@@ -1,5 +1,3 @@
-const Hello = () => {
-  return <div>hello</div>
-}
-
-export default Hello;
+export const Hello = () => {
+  return <div>hello</div>;
+};
