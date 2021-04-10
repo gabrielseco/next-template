@@ -1,0 +1,13 @@
+{
+  "baseUrl": "http://localhost:3000",
+  "video": false,
+  "env": {
+    "apiUrl": "http://localhost:3001",
+    "secretSeedToken": "CYPRESS",
+    "codeCoverage": {
+      "url": "http://localhost:3001/__coverage__"
+    }
+  },
+  "retries": 2,
+  "projectId": "gc3hyq"
+}

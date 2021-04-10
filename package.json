@@ -1,0 +1,103 @@
+{
+  "name": "next-template",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "dev:test": "NODE_ENV=test next dev",
+    "build": "next build",
+    "export": "next export",
+    "deploy": "npm run build && npm run export",
+    "start": "next start",
+    "cypress": "cypress run --record --key 211048aa-4b46-47e8-9f1f-195bc77c84fb",
+    "cypress:dev": "cypress open",
+    "pree2e:dev": "rm -rf .nyc_output coverage .next || true",
+    "e2e:dev": "start-test dev:test 3000 cypress:dev",
+    "e2e": "start-test start 3000 cypress",
+    "lint:js": "front-linter js -- --presets=javascript,react",
+    "lint:ts": "front-linter js -- --presets=typescript,react",
+    "lint:sass": "front-linter sass",
+    "lint": "npm run lint:js && npm run lint:ts && npm run lint:sass",
+    "storybook": "start-storybook -h localhost -s public -p 5000",
+    "storybook-build": "build-storybook -s public -c .storybook -o .out-storybook",
+    "typecheck": "tsc --noEmit && tsc -p cypress/tsconfig.json --noEmit",
+    "coverage:e2e": "nyc report --reporter=text-lcov",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@rogal/classnames": "1.0.3",
+    "@rogal/hooks": "1.0.0-beta.6",
+    "@rogal/http-client": "1.0.0-beta.7",
+    "@rogal/react-translate": "1.0.2",
+    "babel-plugin-istanbul": "6.0.0",
+    "next": "10.0.7",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-query": "3.9.8",
+    "suitcss-utils-flex": "2.0.1"
+  },
+  "devDependencies": {
+    "@cypress/code-coverage": "3.8.5",
+    "@rogal/addon-react-translate": "1.0.1",
+    "@rogal/front-linter": "4.0.0-beta.1",
+    "@storybook/addon-essentials": "6.1.18",
+    "@storybook/addon-storyshots": "6.1.18",
+    "@storybook/addon-viewport": "6.1.18",
+    "@storybook/preset-scss": "1.0.3",
+    "@storybook/react": "6.1.18",
+    "@testing-library/cypress": "7.0.3",
+    "@testing-library/jest-dom": "^5.11.10",
+    "@testing-library/react": "^11.2.6",
+    "@types/node": "^14.14.31",
+    "@types/react": "17.0.2",
+    "@types/testing-library__cypress": "5.0.8",
+    "babel-loader": "8.2.2",
+    "cypress": "6.5.0",
+    "cypress-fail-fast": "2.0.0",
+    "eslint-import-resolver-typescript": "2.4.0",
+    "eslint-plugin-cypress": "2.11.2",
+    "husky": "4.3.8",
+    "identity-obj-proxy": "3.0.0",
+    "jest": "26.6.3",
+    "lint-staged": "10.5.4",
+    "msw": "0.26.2",
+    "msw-storybook-addon": "1.1.0",
+    "sass": "1.32.8",
+    "sass-loader": "10.1.1",
+    "start-server-and-test": "1.12.0",
+    "storybook-addon-next-router": "2.0.4",
+    "typescript": "4.1.5"
+  },
+  "eslintConfig": {
+    "extends": [
+      "./node_modules/@rogal/front-linter/typescript-react-eslint.js"
+    ],
+    "plugins": [
+      "cypress"
+    ],
+    "env": {
+      "cypress/globals": true
+    }
+  },
+  "stylelint": {
+    "extends": [
+      "./node_modules/@rogal/front-linter/.stylelintrc.js"
+    ]
+  },
+  "lint-staged": {
+    "*.{jsx,js}": [
+      "npm run lint:js -- --fix --staged"
+    ],
+    "*.{tsx,ts}": [
+      "npm run lint:ts -- --fix --staged"
+    ],
+    "*.scss": [
+      "npm run lint:sass -- --fix --staged"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run typecheck && lint-staged"
+    }
+  }
+}
