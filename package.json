@@ -51,7 +51,7 @@
     "@types/react": "17.0.2",
     "@types/testing-library__cypress": "5.0.8",
     "babel-loader": "8.2.2",
-    "cypress": "6.5.0",
+    "cypress": "7.0.1",
     "cypress-fail-fast": "2.0.0",
     "eslint-import-resolver-typescript": "2.4.0",
     "eslint-plugin-cypress": "2.11.2",
