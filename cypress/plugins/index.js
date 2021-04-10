@@ -2,7 +2,7 @@
 
 module.exports = (on, config) => {
   // enable code coverage collection
-  require('@cypress/code-coverage/task')(on, config);
+  /*  require('@cypress/code-coverage/task')(on, config); */
   require('cypress-fail-fast/plugin')(on, config);
 
   return config;
