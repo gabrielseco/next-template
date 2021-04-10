@@ -70,7 +70,7 @@
   },
   "eslintConfig": {
     "extends": [
-      "./node_modules/@rogal/front-linter/typescript-react-eslint.js"
+      "./node_modules/@rogal/front-linter/eslint-react.js"
     ],
     "plugins": [
       "cypress"
