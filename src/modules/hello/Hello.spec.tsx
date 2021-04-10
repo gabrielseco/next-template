@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 
-import Hello from './Hello';
+import { Hello } from './Hello';
 
 describe('HelloModule', () => {
   it('should render hello', () => {
