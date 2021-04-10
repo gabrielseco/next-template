@@ -84,7 +84,7 @@ jobs:
         run: npm run storybook-build
 
 
-   e2e:
+  e2e:
     needs: [typecheck, lint, storybook]
     runs-on: ubuntu-latest
     steps:
