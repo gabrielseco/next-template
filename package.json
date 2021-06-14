@@ -52,7 +52,7 @@
     "@types/testing-library__cypress": "5.0.8",
     "babel-loader": "8.2.2",
     "cypress": "7.0.1",
-    "cypress-fail-fast": "2.0.0",
+    "cypress-fail-fast": "2.4.0",
     "eslint-import-resolver-typescript": "2.4.0",
     "eslint-plugin-cypress": "2.11.2",
     "husky": "4.3.8",
