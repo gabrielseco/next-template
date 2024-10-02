@@ -36,7 +36,7 @@
     "suitcss-utils-flex": "2.0.1"
   },
   "devDependencies": {
-    "@cypress/code-coverage": "3.8.5",
+    "@cypress/code-coverage": "3.13.4",
     "@rogal/addon-react-translate": "1.0.1",
     "@rogal/front-linter": "4.0.0-beta.1",
     "@storybook/addon-essentials": "6.1.18",
